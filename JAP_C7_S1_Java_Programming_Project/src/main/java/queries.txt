@@ -1,0 +1,51 @@
+
+CREATE DATABASE JukeBox;
+
+USE JukeBox;
+
+CREATE TABLE SignUp(
+	userId int primary key auto_increment,
+    userName varchar(50),
+    mobile varchar(50),
+    emailId varchar(50),
+    pWord varchar(50)
+);
+
+CREATE TABLE Songs (
+    songId int primary key auto_increment,
+    songName varchar(30),
+    genre varchar(30),
+    artist varchar(30),
+    duration float,
+    releaseDate date,
+    album varchar(50),
+    songSource varchar(300),
+);
+
+CREATE TABLE Podcast (
+    podId varChar(20),
+    epId varchar(20),
+    podName varchar(45),
+    epName varchar(50),
+    celebrity varchar(45),
+    duration varchar(10),
+    publishedDate date,
+    podSource varchar(300),
+    PRIMARY KEY(podId, epId)
+);
+
+CREATE TABLE PlayList
+(
+    playlistId int primary key auto_increment,
+    playlistname varchar(50),
+    UserId int , Foreign Key (UserId) References SignUp(userId)
+);
+
+CREATE TABLE playlistDetails
+(
+    detailId int primary key auto_increment,
+    playListId int, -- foreign Key
+    songId/podcastId varchar(30),
+    playListType varchar(50),
+    Foreign Key(playListId) References PlayList(playListId)
+);

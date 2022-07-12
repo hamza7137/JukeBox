@@ -1,0 +1,30 @@
+Home Page :
+	User Login
+	If login is success, the all songs and podcast should visible
+
+Task 1:
+    Retrieve all songs and filter by genre, artist, album and show result in sorted order
+    Show all the Songs in Menu.
+
+Task 2:
+	Retrive all podcast and filter by celebrity and published date
+    Show all the Podcasts in Menu.
+
+Task 3:
+    1)Create a playlist
+	2)insert songs in playlist
+	3)insert podcasts in playlist
+	4)playlist can contain both song and podcast.
+	5)To display Playlist
+
+user can have multiple playlist : but he can't have multiple playlists with Same Name.
+1)Old songs
+2)90's songs
+3)Latest songs
+4)Wedding songs
+Backend : Mysql tables
+
+Task 4 :
+
+1 : To play Songs
+2 : To play podcast
